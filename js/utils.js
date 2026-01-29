@@ -1,17 +1,4 @@
-export function getElementFullAndShortName(id, isShort) {
-  switch (id + 1) {
-    case 1:
-      return isShort ? ["A", "C"] : ["AURA", "CELL"];
-    case 2:
-      return isShort ? ["B", "C"] : ["BIO", "CHROMA"];
-    case 3:
-      return isShort ? ["C", "H"] : ["CELESTIAL", "HYDRATION"];
-    case 4:
-      return isShort ? ["B", "C"] : ["BLOOM", "CANVAS"];
-  }
-}
-
-export function getElementNameAndDescription(id) {
+export function getElementInfo(id) {
   switch (id + 1) {
     case 1:
       return [
@@ -42,30 +29,5 @@ export function getElementNameAndDescription(id) {
         "BLOOM CANVAS",
         "Bloom Canvas — это диалог между искусством и природой. Каждый тюбик — это не просто косметика, а живое полотно, на котором цветы продолжают цвести, а листья — дышать. Мы не создаем макияж — мы выращиваем образы, позволяя вам стать художником собственной весны, независимо от времени года за окном.",
       ];
-  }
-}
-
-export function getNavElementProperWidth(id) {
-  switch (id + 1) {
-    case 1:
-      return {
-        firstWordWidth: "125px",
-        secondWordWidth: "110px",
-      };
-    case 2:
-      return {
-        firstWordWidth: "80px",
-        secondWordWidth: "150px",
-      };
-    case 3:
-      return {
-        firstWordWidth: "250px",
-        secondWordWidth: "110px",
-      };
-    case 4:
-      return {
-        firstWordWidth: "165px",
-        secondWordWidth: "150px",
-      };
   }
 }

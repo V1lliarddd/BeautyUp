@@ -14,6 +14,7 @@
   border: 30px solid #fff;
 }
 .container__content {
+  corner-shape: squircle;
   border-radius: 20px;
   width: 100%;
   z-index: 100;
@@ -47,6 +48,20 @@
   font-size: 20px;
 }
 
+.header__nav-bar-element {
+  cursor: pointer;
+}
+
+.header__nav-bar-element--active .header__nav-bar-element-link {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.header__nav-bar-element-link {
+  color: #fff;
+  text-decoration: none;
+}
+
 .main {
   display: flex;
   align-items: center;
@@ -58,6 +73,7 @@
 }
 
 .main__navigation {
+  width: 3%;
   position: absolute;
   left: 20px;
   top: 20%;
@@ -67,31 +83,66 @@
 }
 
 .main__navigation-nav {
+  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  align-items: start;
+  justify-content: start;
+  gap: 100px;
 }
 
-.main__navigation-nav li {
-  font-size: 45px;
-  color: #fff;
+.main__navigation-nav-element {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 10px;
+  position: relative;
   cursor: pointer;
 }
 
+.main__navigation-nav-element:nth-child(2n) {
+  align-self: flex-end;
+}
+
+.main__navigation-nav-element:nth-child(2n)::after {
+  content: "";
+  width: 5px;
+  height: 110px;
+  background-color: #fff;
+  position: absolute;
+  cursor: auto;
+  transform: rotate(-12deg);
+  left: calc(25% - 8px);
+  bottom: 90%;
+}
+
+.main__navigation-nav-element:nth-child(3)::after {
+  content: "";
+  width: 5px;
+  height: 110px;
+  background-color: #fff;
+  position: absolute;
+  cursor: auto;
+  transform: rotate(12deg);
+  right: calc(25% - 8px);
+  bottom: 90%;
+}
+
 .main__navigation-nav-element--active {
-  text-shadow:
-    1px 1px 0 #3a7bc8,
-    2px 2px 0 #3a7bc8,
-    3px 3px 0 #3a7bc8,
-    4px 4px 0 #3a7bc8,
-    5px 5px 0 #3a7bc8,
-    6px 6px 0 #3a7bc8,
-    7px 7px 0 #3a7bc8,
-    8px 8px 0 #3a7bc8,
-    9px 9px 0 #3a7bc8,
-    10px 10px 0 #3a7bc8,
-    11px 11px 20px rgba(0, 0, 0, 0.5); /* Размытая тень для глубины */
+  position: relative;
+}
+
+.main__navigation-nav-element--active::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
 }
 
 .main__product {
@@ -101,6 +152,10 @@
   justify-items: center;
   flex-direction: column;
   gap: 40px;
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.8),
+    0 2px 6px rgba(0, 0, 0, 0.6),
+    0 3px 12px rgba(0, 0, 0, 0.4);
   color: #fff;
 }
 
