@@ -1,0 +1,28 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  border: 30px solid #fff;
+}
+
+.container__content {
+  corner-shape: squircle;
+  border-radius: 20px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: url(../images/product-1.jpg);
+  background-position: center;
+  background-size: cover;
+}

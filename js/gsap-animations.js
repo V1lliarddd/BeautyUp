@@ -50,3 +50,28 @@ export function changeNavBarBackgroundImage(
       "<",
     );
 }
+
+export function animateTitleOnContactsPage(chars) {
+  gsap.timeline().fromTo(
+    chars,
+    {
+      opacity: 0,
+      y: -30,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: 0.2,
+    },
+  );
+}
+
+export function animateContactInfoBlock(
+  infoBlockText,
+  infoBlockDataMap,
+  infoBlockReveal,
+  action,
+) {
+  gsap.fromTo(infoBlockReveal, {}, {});
+}

@@ -31,3 +31,7 @@ export function getElementInfo(id) {
       ];
   }
 }
+
+export function getVisualCenter(contactVisualElement) {
+  return contactVisualElement.offsetTop + contactVisualElement.offsetHeight / 2;
+}

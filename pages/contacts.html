@@ -3,63 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/style-contacts.css" />
+    <link rel="stylesheet" href="../styles/contacts.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/common.css" />
     <title>BeautyUp</title>
   </head>
   <body class="container">
     <div id="content" class="container__content">
-      <header class="header">
-        <h1 class="header__logo-text">BeautyUp</h1>
-        <nav>
-          <ul class="header__nav-bar">
-            <li class="header__nav-bar-element header__nav-bar-element--active">
-              <a href="" class="header__nav-bar-element-link">Главная</a>
-            </li>
-            <li class="header__nav-bar-element">Продукты</li>
-            <li class="header__nav-bar-element">
-              <a
-                class="header__nav-bar-element-link"
-                href="./pages/contacts.html"
-                >Контакты</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main class="main">
-        <div class="main__heart" role="img"></div>
-        <section class="main__contacts">
-          <article class="contact-row">
-            <p>Номер телефона:</p>
-            <p>8(800)-555-35-35</p>
-          </article>
-          <article class="contact-row">
-            <p>Адрес:</p>
-            <p>г. Москва, ул. Пушкина, д. Колотушкина</p>
-          </article>
-          <article class="contact-row">
-            <p>Email:</p>
-            <p>beautyUp@mail.ru</p>
-          </article>
-          <article class="contact-row">
-            <p>Запасной Email:</p>
-            <p>beautyUpZapas@mail.ru</p>
-          </article>
-          <article class="contact-row">
-            <p>Telegram:</p>
-            <p>@beautyUpShop</p>
-          </article>
-          <article class="contact-row">
-            <p>Vk:</p>
-            <p>@beautyUpShop</p>
-          </article>
+      <header id="header" class="header"></header>
+      <main class="contacts">
+        <h1 class="contacts__title">
+          Красота, которой
+          <span id="contacts__title-accent">можно</span> доверять
+        </h1>
+        <section class="contacts__info">
+          <aticle class="contacts__info-block">
+            <h2>г.Москва, ул. Пушкина, 21</h2>
+          </aticle>
+          <aticle class="contacts__info-block">
+            <h2>8(800)-555-35-35</h2>
+          </aticle>
+          <aticle class="contacts__info-block">
+            <h2>beautyUp@mail.ru</h2>
+          </aticle>
+        </section>
+        <section class="contacts__media">
+          <div class="contacts__media-logo">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <img src="../images/instagram.svg" alt="Instagram" />
+            </a>
+          </div>
+          <div class="contacts__media-logo">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <img src="../images/telegram.svg" alt="Telegram" />
+            </a>
+          </div>
+          <div class="contacts__media-logo">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <img src="../images/x.svg" alt="X" />
+            </a>
+          </div>
+          <div class="contacts__media-logo">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <img src="../images/vk.svg" alt="Vk" />
+            </a>
+          </div>
         </section>
       </main>
-      <footer class="footer">
-        <h2>2026</h2>
-      </footer>
+      <footer id="footer" class="footer"></footer>
     </div>
     <script type="module" src="../js/contacts.js"></script>
+    <script>
+      fetch("../ui/header.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("header").innerHTML = html));
+
+      fetch("../ui/footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
+    </script>
   </body>
 </html>
