@@ -1,8 +1,9 @@
 import gsap from "gsap";
-import { TextPlugin } from "gsap/all";
+import { ScrollTrigger, TextPlugin } from "gsap/all";
 import { getElementInfo } from "./utils";
 
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export function changeNavBarBackgroundImage(
   navElement,
@@ -24,7 +25,7 @@ export function changeNavBarBackgroundImage(
       duration: 0.5,
     })
     .set(container, {
-      backgroundImage: `url(../images/product-${id + 1}.jpg)`,
+      backgroundImage: `url(../images/index/product-${id + 1}.jpg)`,
     })
 
     .to(container, {
