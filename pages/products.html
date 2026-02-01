@@ -3,37 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/fonts.css" />
     <link rel="stylesheet" href="../styles/products.css" />
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/common.css" />
     <title>BeautyUp</title>
   </head>
-  <body class="container">
+  <body class="container cormorant-garamond-regular-normal">
     <div class="container__content">
       <header id="header" class="header"></header>
       <main class="product-info">
-        <h1>Твоя крастота - твои правила</h1>
-        <section class="scroll-section">
-          <div class="card" id="card-1">
-            <img src="../images/products/product-demo-1.jpg" alt="" />
-          </div>
-          <div class="card" id="card-2">
-            <img src="../images/products/product-demo-2.jpg" alt="" />
-          </div>
-          <div class="card" id="card-3">
-            <img src="../images/products/product-demo-3.jpg" alt="" />
-          </div>
-          <div class="card" id="card-4">
-            <img src="../images/products/product-demo-4.jpg" alt="" />
-          </div>
-          <div class="card" id="card-5">
-            <img src="../images/products/product-demo-5.jpg" alt="" />
-          </div>
-          <div class="card" id="card-6">
-            <img src="../images/products/product-demo-6.jpg" alt="" />
-          </div>
-        </section>
+        <h1>Твоя красота - твои правила</h1>
+        <div class="scroll-container">
+          <section class="scroll-section">
+            <div
+              class="card"
+              data-bg-color="rgb(0, 197, 229)"
+              data-name="Палетка"
+            >
+              <img src="../images/products/product-demo-1.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(235, 156, 123)"
+              data-name="Палетка"
+            >
+              <img src="../images/products/product-demo-2.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(218, 219, 223)"
+              data-name="Гуаша"
+            >
+              <img src="../images/products/product-demo-3.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(233, 222, 218)"
+              data-name="Гуаша"
+            >
+              <img src="../images/products/product-demo-4.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(174, 159, 202)"
+              data-name="Сыворотка"
+            >
+              <img src="../images/products/product-demo-5.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(219, 242, 226)"
+              data-name="Палетка"
+            >
+              <img src="../images/products/product-demo-6.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(229, 185, 140)"
+              data-name="Масла"
+            >
+              <img src="../images/products/product-demo-7.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(220, 220, 220)"
+              data-name="Духи"
+            >
+              <img src="../images/products/product-demo-8.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(239, 230, 235)"
+              data-name="Очищающие средства"
+            >
+              <img src="../images/products/product-demo-9.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(213, 172, 150)"
+              data-name="Бронзер"
+            >
+              <img src="../images/products/product-demo-10.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(218, 204, 191)"
+              data-name="Тональный крем"
+            >
+              <img src="../images/products/product-demo-11.jpg" alt="" />
+            </div>
+            <div
+              class="card"
+              data-bg-color="rgb(245, 209, 71)"
+              data-name="Пудра"
+            >
+              <img src="../images/products/product-demo-12.jpg" alt="" />
+            </div>
+          </section>
+        </div>
+        <h2 class="product-info__name"></h2>
       </main>
       <footer id="footer" class="footer"></footer>
     </div>

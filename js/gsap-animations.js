@@ -76,3 +76,56 @@ export function animateContactInfoBlock(
 ) {
   gsap.fromTo(infoBlockReveal, {}, {});
 }
+
+export function animateSliderSection() {
+  const container = document.querySelector(".scroll-container");
+  const scrollSection = document.querySelector(".scroll-section");
+  const cards = document.querySelectorAll(".card");
+
+  const cardsLength = cards.length;
+  const containerWidth = container.offsetWidth;
+  const scrollSectionWidth = scrollSection.offsetWidth;
+
+  if (!container || !scrollSection || cardsLength === 0) return;
+
+  function recalculateScrollValue() {
+    return scrollSectionWidth - containerWidth;
+  }
+
+  container.style.overflowX = "hidden";
+  gsap.to(scrollSection, {
+    x: () => -1 * recalculateScrollValue(),
+    scrollTrigger: {
+      trigger: ".container",
+      start: "top top",
+      end: () => {
+        `+=${recalculateScrollValue()}`;
+      },
+      scrub: 2,
+      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      // onUpdate: () => {
+      //   console.log(scrollSection.getBoundingClientRect().left);
+      // },
+    },
+  });
+}
+
+export function changeBgColorOnSlider(card) {
+  const containerContent = document.querySelector(".container__content");
+  gsap.to(containerContent, {
+    backgroundColor: card.dataset.bgColor,
+    duration: 0.5,
+  });
+}
+
+export function changeProductName(card) {
+  const productNameElement = document.querySelector(".product-info__name");
+  gsap.to(productNameElement, {
+    text: {
+      value: `${card.dataset.name}`,
+      speed: 0.7,
+    },
+  });
+}

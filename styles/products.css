@@ -1,16 +1,19 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
 .container__content {
   background-image: none !important;
   background-color: pink;
 }
 
 .product-info {
-  position: relative;
-  overflow-x: hidden;
+  height: 100%;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: start;
   align-items: center;
+  gap: 50px;
 }
 
 .product-info h1 {
@@ -18,12 +21,68 @@
   font-size: 5rem;
 }
 
-.scroll-section {
-  width: 100vw;
-  overflow-x: hidden;
+.scroll-container {
   height: 50%;
+  width: 80%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.scroll-container::before {
+  content: "";
   position: absolute;
-  display: flex;
-  top: 20%;
+  top: 0;
   left: 0;
+  width: 20px;
+  height: 300px;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.2) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.scroll-container::after {
+  content: "";
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 20px;
+  height: 300px;
+  z-index: 1;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.2) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.scroll-section {
+  height: 100%;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+}
+
+.card img {
+  width: 450px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.product-info__name {
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
 }

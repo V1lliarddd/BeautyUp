@@ -42,30 +42,6 @@
   align-self: flex-end;
 }
 
-.main__navigation-nav-element:nth-child(2n)::after {
-  content: "";
-  width: 5px;
-  height: 110px;
-  background-color: #fff;
-  position: absolute;
-  cursor: auto;
-  transform: rotate(-12deg);
-  left: calc(25% - 8px);
-  bottom: 90%;
-}
-
-.main__navigation-nav-element:nth-child(3)::after {
-  content: "";
-  width: 5px;
-  height: 110px;
-  background-color: #fff;
-  position: absolute;
-  cursor: auto;
-  transform: rotate(12deg);
-  right: calc(25% - 8px);
-  bottom: 90%;
-}
-
 .main__navigation-nav-element--active {
   position: relative;
 }

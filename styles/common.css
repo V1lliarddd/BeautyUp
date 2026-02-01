@@ -7,9 +7,13 @@
   user-select: none;
 }
 
+html {
+  height: 100%;
+}
+
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   border: 30px solid #fff;
 }
