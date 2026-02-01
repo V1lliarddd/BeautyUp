@@ -9,7 +9,7 @@
 }
 
 .main__navigation {
-  width: 3%;
+  width: 40px;
   position: absolute;
   left: 20px;
   top: 20%;
@@ -25,12 +25,12 @@
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  gap: 100px;
+  gap: 50px;
 }
 
 .main__navigation-nav-element {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
   border-radius: 100px;
   padding: 10px;
@@ -44,17 +44,6 @@
 
 .main__navigation-nav-element--active {
   position: relative;
-}
-
-.main__navigation-nav-element--active::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  border: 2px solid #fff;
-  top: calc(50% - 20px);
-  left: calc(50% - 20px);
 }
 
 .main__product {
