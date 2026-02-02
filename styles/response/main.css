@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+  .main__product {
+    width: 100%;
+  }
+  .main__navigation {
+    top: 70%;
+    transform: rotate(-90deg) translateX(-50%);
+    left: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .main__navigation-nav {
+    gap: 0;
+  }
+  .main__navigation {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+}

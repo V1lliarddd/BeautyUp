@@ -29,4 +29,5 @@ html {
   background-image: url(../images//index/product-1.jpg);
   background-position: center;
   background-size: cover;
+  aspect-ratio: 1 / 1;
 }
