@@ -5,6 +5,20 @@ import { getElementInfo } from "./utils";
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
+export function toggleBurgerMenuAnimation(burgerMenu) {
+  gsap
+    .timeline()
+    .set(burgerMenu, {
+      display: "block",
+      width: "100%",
+      height: "100%",
+    })
+    .to(burgerMenu, {
+      top: 0,
+      duration: 0.5,
+    });
+}
+
 export function changeNavBarBackgroundImage(
   navElement,
   container,

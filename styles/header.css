@@ -11,6 +11,16 @@
   color: #fff;
 }
 
+.menu {
+  display: flex;
+}
+
+.menu .menu__burger,
+.menu .burger-menu,
+.menu__burger-icon-open {
+  display: none;
+}
+
 .header__nav-bar {
   list-style: none;
   display: flex;

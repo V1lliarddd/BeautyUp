@@ -6,3 +6,50 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 350px) {
+  .header__nav-bar {
+    display: none;
+  }
+  .menu .menu__burger-icon-open {
+    display: block;
+  }
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* body {
+    position: relative;
+  }
+
+  .menu .burger-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    top: 100%;
+    left: 0;
+    z-index: 100;
+  }
+
+  .burger-menu .burger-menu__nav-bar {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .burger-menu
+    .burger-menu__nav-bar
+    .burger-menu__nav-bar-element
+    .burger-menu__nav-bar-element-link {
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+  } */
+}

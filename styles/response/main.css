@@ -9,6 +9,17 @@
   }
 }
 
+@media (max-width: 560px) {
+  .main__navigation-nav {
+    gap: 0;
+  }
+  .main__navigation {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+}
+
 @media (max-width: 320px) {
   .main__navigation-nav {
     gap: 0;

@@ -38,6 +38,26 @@ export function getElementInfo(id) {
   }
 }
 
-export function getVisualCenter(contactVisualElement) {
-  return contactVisualElement.offsetTop + contactVisualElement.offsetHeight / 2;
+export async function getModuleElement(element, activePage = null) {
+  await fetch(`../ui/${element}.html`)
+    .then((res) => res.text())
+    .then((html) => {
+      document.getElementById(`${element}`).innerHTML = html;
+      if (activePage !== null) {
+        updateNavBar(activePage);
+      }
+    });
+}
+
+function updateNavBar(pageIndex) {
+  const navigationElements = document.querySelectorAll(
+    ".header__nav-bar-element",
+  );
+  document
+    .querySelector(".header__nav-bar-element--active")
+    .classList.remove("header__nav-bar-element--active");
+
+  navigationElements[pageIndex].classList.add(
+    "header__nav-bar-element--active",
+  );
 }

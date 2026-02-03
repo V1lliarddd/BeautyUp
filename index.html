@@ -50,14 +50,5 @@
       <footer id="footer" class="footer"></footer>
     </div>
     <script type="module" src="./js/main.js"></script>
-    <script>
-      fetch("./ui/header.html")
-        .then((res) => res.text())
-        .then((html) => (document.getElementById("header").innerHTML = html));
-
-      fetch("./ui/footer.html")
-        .then((res) => res.text())
-        .then((html) => (document.getElementById("footer").innerHTML = html));
-    </script>
   </body>
 </html>
