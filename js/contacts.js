@@ -1,9 +1,11 @@
 import { animateTitleOnContactsPage } from "./gsap-animations";
 import { splitTextOnChars } from "./gsap-utils";
+import { toggleBurgerMenu } from "./header";
 import { getModuleElement } from "./utils";
 
-getModuleElement("header", 2);
-getModuleElement("footer");
+await getModuleElement("header", 2);
+await getModuleElement("footer");
+await toggleBurgerMenu();
 
 const titleAccent = document.getElementById("contacts__title-accent");
 

@@ -1,10 +1,10 @@
 import { changeNavBarBackgroundImage } from "./gsap-animations";
-import { toggleBurgerMenu } from "./header";
 import { getModuleElement } from "./utils";
+import { toggleBurgerMenu } from "./header";
 
 await getModuleElement("header", 0);
 await getModuleElement("footer");
-toggleBurgerMenu();
+await toggleBurgerMenu();
 
 const navigationElements = document.querySelectorAll(
   ".main__navigation-nav-element",

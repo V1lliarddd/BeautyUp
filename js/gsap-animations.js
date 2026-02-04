@@ -5,18 +5,12 @@ import { getElementInfo } from "./utils";
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
-export function toggleBurgerMenuAnimation(burgerMenu) {
-  gsap
-    .timeline()
-    .set(burgerMenu, {
-      display: "block",
-      width: "100%",
-      height: "100%",
-    })
-    .to(burgerMenu, {
-      top: 0,
-      duration: 0.5,
-    });
+export function toggleBurgerMenuAnimation(burgerMenu, action) {
+  gsap.timeline().to(burgerMenu, {
+    display: action === "open" ? "flex" : "none",
+    top: action === "open" ? 0 : "110%",
+    duration: 0.5,
+  });
 }
 
 export function changeNavBarBackgroundImage(
@@ -119,9 +113,6 @@ export function animateSliderSection() {
       pin: true,
       anticipatePin: 1,
       invalidateOnRefresh: true,
-      // onUpdate: () => {
-      //   console.log(scrollSection.getBoundingClientRect().left);
-      // },
     },
   });
 }

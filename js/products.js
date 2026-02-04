@@ -9,6 +9,7 @@ getModuleElement("header", 1);
 getModuleElement("footer");
 
 function placeProducts() {
+  if (window.innerWidth <= 650) return;
   const cards = document.querySelectorAll(".card");
   const scrollSection = document.querySelector(".scroll-section");
   const cardsGap = 15;

@@ -44,20 +44,27 @@ export async function getModuleElement(element, activePage = null) {
     .then((html) => {
       document.getElementById(`${element}`).innerHTML = html;
       if (activePage !== null) {
-        updateNavBar(activePage);
+        updateNavBar(activePage, window.innerWidth >= 320);
       }
     });
 }
 
-function updateNavBar(pageIndex) {
-  const navigationElements = document.querySelectorAll(
-    ".header__nav-bar-element",
+function updateNavBar(pageIndex, isPhoneSize) {
+  const classes = {
+    navBarElementClass: isPhoneSize
+      ? ".burger-menu__nav-bar-element"
+      : ".header__nav-bar-element",
+    navBarActiveElementClass: isPhoneSize
+      ? ".burger-menu__nav-bar-element--active"
+      : ".header__nav-bar-element--active",
+  };
+  const NavigationElements = document.querySelectorAll(
+    classes.navBarElementClass,
   );
   document
-    .querySelector(".header__nav-bar-element--active")
-    .classList.remove("header__nav-bar-element--active");
-
-  navigationElements[pageIndex].classList.add(
-    "header__nav-bar-element--active",
+    .querySelector(classes.navBarActiveElementClass)
+    .classList.remove(classes.navBarActiveElementClass.slice(1));
+  NavigationElements[pageIndex].classList.add(
+    classes.navBarActiveElementClass.slice(1),
   );
 }

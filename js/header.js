@@ -1,11 +1,13 @@
 import { toggleBurgerMenuAnimation } from "./gsap-animations";
 
-export function toggleBurgerMenu() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const openBurgerMenuBtn = document.getElementById("menu__burger-icon-open");
-    const burgerMenu = document.getElementById("burger-menu");
-    openBurgerMenuBtn.addEventListener("click", () => {
-      toggleBurgerMenuAnimation(burgerMenu);
-    });
+export async function toggleBurgerMenu() {
+  const openBurgerMenuBtn = document.querySelector(".menu__burger-icon-open");
+  const closeBurgerMenuBtn = document.querySelector(".menu__burger-icon-close");
+  const burgerMenu = document.querySelector(".burger-menu");
+  openBurgerMenuBtn.addEventListener("click", () => {
+    toggleBurgerMenuAnimation(burgerMenu, "open");
+  });
+  closeBurgerMenuBtn.addEventListener("click", () => {
+    toggleBurgerMenuAnimation(burgerMenu, "close");
   });
 }

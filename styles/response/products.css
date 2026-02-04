@@ -1,0 +1,39 @@
+@media (max-width: 1020px) {
+  .product-info h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 840px) {
+  .product-info h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 650px) {
+  .product-info h1 {
+    font-size: 2.5rem;
+  }
+  .scroll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 80%;
+  }
+  .scroll-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .scroll-container::after,
+  .scroll-container::before {
+    content: none;
+  }
+
+  .card {
+    position: relative;
+    left: 0 !important;
+  }
+}

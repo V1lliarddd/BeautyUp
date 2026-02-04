@@ -35,7 +35,8 @@
   cursor: pointer;
 }
 
-.header__nav-bar-element--active .header__nav-bar-element-link {
+.header__nav-bar-element--active .header__nav-bar-element-link,
+.burger-menu__nav-bar-element--active {
   text-decoration: underline;
   text-underline-offset: 10px;
 }
