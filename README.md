@@ -1,5 +1,5 @@
 # BeatyUp
 
-TODO:
-
-- разработать бургер-меню для хедера
+- gsap
+- js
+- css(response)
